@@ -3,7 +3,7 @@ if [ $# != 1 ]; then
 echo "Wrong parameters"
 else
     if [[ $1 =~ [0-9] ]]; then
-    echo "Wrong parameters"
+    echo "ERROR"
     else
     echo $1
     fi
