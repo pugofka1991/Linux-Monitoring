@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export TIMEZONE="$(timedatectl | grep "Time zone")"
+export TIMEZONE="$(timedatectl show --value | head -n 1) $(date +"UTC %-:::z")"
 export OS="$(cat /etc/issue | awk '{print $1$2}')"
 export DATE="$(date +"%d %B %Y %T")"
 export UPTIME="$(uptime -p | awk '{print $2" "$3" for this moment"}')"
