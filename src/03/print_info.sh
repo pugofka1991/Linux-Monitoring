@@ -40,14 +40,14 @@ for i in 0 1 2 3;
     do
         if [[ ${mas[$i]} < 1 || ${mas[$i]} > 6 ]];
             then    
-                echo "You entered an invalid parameter"
+                echo -e "${text_err2}You entered an invalid parameter. ${text_err1}${text_err2}Please try again.$clear"
                     exit 1
                 fi
 done 
 
 if [[ ${mas[0]} == ${mas[1]} || ${mas[2]} == ${mas[3]} ]];
 	then   
-		echo -e "${text_err1}${text_err2}The font and background colors of the same column must not match. Please try again.$clear"
+		echo -e "${text_err2}The font and background colors of the same column must not match. ${text_err1}${text_err2}Please try again.$clear"
 		exit 1
 fi
 
