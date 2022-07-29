@@ -18,15 +18,6 @@ mas[1]=$textNAME
 mas[2]=$backTEXT
 mas[3]=$textTEXT
 
-for i in 0 1 2 3;
-    do
-        if [[ ${mas[$i]} < 1 || ${mas[$i]} > 6 ]];
-            then    
-                echo "You entered an invalid parameter"
-                    exit 1
-                fi
-done                    
-
 back_color_1="\033[47m"     
 back_color_2="\033[41m"      
 back_color_3="\033[42m"      
@@ -39,9 +30,28 @@ text_color_2="\033[31m"
 text_color_3="\033[32m"     
 text_color_4="\033[34m"     
 text_color_5="\033[35m"     
-text_color_6="\033[30m"    
+text_color_6="\033[30m"
+text_err1="\033[5m" 
+text_err2="\033[31m"    
 
 clear="\e[0m"
+
+for i in 0 1 2 3;
+    do
+        if [[ ${mas[$i]} < 1 || ${mas[$i]} > 6 ]];
+            then    
+                echo "You entered an invalid parameter"
+                    exit 1
+                fi
+done 
+
+if [[ ${mas[0]} == ${mas[1]} || ${mas[2]} == ${mas[3]} ]];
+	then   
+		echo -e "${text_err1}${text_err2}The font and background colors of the same column must not match. Please try again.$clear"
+		exit 1
+fi
+
+
 
 for i in 0 2;
     do
