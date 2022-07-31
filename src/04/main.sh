@@ -4,7 +4,7 @@ if [ $# != 0 ]
 then
     echo "Invalid input!"
 else
-    source options.tex
+    source config.txt
 
     export backNAME=$column1_background
     export textNAME=$column1_font_color
