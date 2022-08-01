@@ -1,15 +1,15 @@
 #!/bin/bash
 
-folders_5=($f_5)
-folders_size_5=($f_size_5)
+folders_5=($folder_5)
+folders_size_5=($folder_size_5)
 
-files_text_10=($f_10)
-files_size_10=($f_size_10)
+files_text_10=($folder_10)
+files_size_10=($folder_size_10)
 
 exec_files_10=($e_files_10)
 exec_files_size_10=($e_files_size_10)
 
-echo "Total number of folders (including all nested ones) = $f_total"
+echo "Total number of folders (including all nested ones) = $total_number_of_folders"
 echo "TOP 5 folders of maximum size arranged in descending order (path and size):"
 for (( i = 0; i < 5; i++ ))
 do
