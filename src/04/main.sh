@@ -1,11 +1,10 @@
 #!/bin/bash
 
-if [ $# != 0 ]
-then
-    echo "Invalid input!"
+if [ $# != 0 ];
+    then
+        echo "Invalid input!"
 else
-    source config.txt
-
+    source config.conf
     export backNAME=$column1_background
     export textNAME=$column1_font_color
     export backTEXT=$column2_background
